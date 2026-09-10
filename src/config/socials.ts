@@ -38,7 +38,7 @@ export const PROFILES: FounderProfile[] = [
     role: "Co-Founder & Tech Lead",
     tagline: "Building ApeX, open-source projects & community software at LNCTU.",
     photoUrl: "./avatars/vansh.png",
-    photoPosition: "center 18%",
+    photoPosition: "center center",
     links: {
       linkedin: "https://www.linkedin.com/in/vansh-yadav-5965033a2/",
       github: "https://github.com/yadavvansh25",
