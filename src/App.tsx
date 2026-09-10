@@ -6,10 +6,11 @@ import { MainGlassCard } from './components/MainGlassCard';
 import { ComingSoonSection } from './components/ComingSoonSection';
 import { BottomMessage } from './components/BottomMessage';
 import { Footer } from './components/Footer';
+import { AppleLiquidNavbar } from './components/AppleLiquidNavbar';
 
 export const App: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-[#08080a] text-white flex flex-col justify-between selection:bg-white/20 selection:text-white">
+    <div className="relative min-h-screen bg-[#08080a] text-white flex flex-col justify-between selection:bg-white/20 selection:text-white pb-28">
       {/* Subtle Apple-inspired ambient lighting & geometry */}
       <AmbientBackground />
 
@@ -33,6 +34,9 @@ export const App: React.FC = () => {
 
       {/* Minimal Footer */}
       <Footer />
+
+      {/* Apple Liquid Glass Floating Dock (iOS/visionOS style) */}
+      <AppleLiquidNavbar />
     </div>
   );
 };

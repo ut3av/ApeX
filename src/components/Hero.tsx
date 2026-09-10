@@ -5,10 +5,13 @@ import { MapPin } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center pt-8 pb-7 px-4 max-w-xl mx-auto z-10 relative">
+    <section 
+      id="hero-section"
+      className="flex flex-col items-center text-center pt-8 pb-7 px-4 max-w-xl mx-auto z-10 relative scroll-mt-20"
+    >
       {/* Emblem with subtle entrance */}
       <div className="mb-5 animate-fade-in">
-        <ApexEmblem size={64} />
+        <ApexEmblem size={76} />
       </div>
 
       {/* Main ApeX Wordmark with subtle silver gradient on X */}
@@ -29,9 +32,9 @@ export const Hero: React.FC = () => {
         {COMMUNITY_INFO.description}
       </p>
 
-      {/* Location Indicator */}
-      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full liquid-glass-badge text-xs text-silver-400 font-normal">
-        <MapPin className="w-3.5 h-3.5 text-silver-400/80" />
+      {/* Apple Liquid Location Pill */}
+      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full apple-liquid-dock text-xs text-silver-300 font-normal shadow-lg">
+        <MapPin className="w-3.5 h-3.5 text-silver-400" />
         <span>{COMMUNITY_INFO.location}</span>
       </div>
     </section>
