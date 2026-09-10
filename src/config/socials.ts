@@ -85,4 +85,7 @@ export const COMING_SOON_ITEMS: ComingSoonItem[] = [
   },
   {
     id: "opportunities",
-    title: 
+    title: "Opportunity Radar",
+    description: "Hackathons, open-source bounties & internship referrals.",
+  },
+];
