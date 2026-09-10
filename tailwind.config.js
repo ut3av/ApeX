@@ -42,6 +42,15 @@ export default {
           'Roboto',
           'sans-serif',
         ],
+        display: [
+          'Syne',
+          '"Plus Jakarta Sans"',
+          'sans-serif',
+        ],
+        tech: [
+          '"Space Grotesk"',
+          'sans-serif',
+        ],
       },
       boxShadow: {
         'glass-card': '0 30px 60px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.15)',

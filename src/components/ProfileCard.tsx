@@ -72,18 +72,19 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ profile }) => {
 
         {/* Identity info */}
         <div className="flex flex-col text-left flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white truncate">
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <h3 className="font-display text-2xl sm:text-3xl font-extrabold tracking-[-0.03em] bg-gradient-to-r from-white via-[#f5f5f7] to-[#a1a1aa] bg-clip-text text-transparent truncate drop-shadow-sm">
               {profile.name}
             </h3>
-            <span className="text-xs text-silver-400 font-mono">
+            <span className="text-xs text-silver-500 font-mono tracking-tight">
               {profile.handle}
             </span>
           </div>
 
-          <div className="inline-block mt-1">
-            <span className="text-[10.5px] font-medium tracking-wide text-silver-300 uppercase px-2 py-0.5 rounded-md bg-white/[0.05] border border-white/10">
-              {profile.role}
+          <div className="inline-flex mt-1.5">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full apple-liquid-active-pill text-[11px] font-medium tracking-wide text-silver-200 border border-white/20 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>{profile.role}</span>
             </span>
           </div>
 
