@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  background-color: #08080a;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom Liquid Glass utilities */
+.liquid-glass-card {
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 
+    0 30px 70px -15px rgba(0, 0, 0, 0.8),
+    0 10px 25px -5px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 0 20px 0 rgba(255, 255, 255, 0.015);
+}
+
+.liquid-glass-btn {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: 
+    0 8px 20px -6px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 28px -6px rgba(0, 0, 0, 0.65),
+    0 0 20px 0 rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.32);
+}
+
+.liquid-glass-btn:active {
+  transform: translateY(0) scale(0.985);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 4px 12px -4px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+.liquid-glass-preview-card {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 
+    0 10px 24px -8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.09);
+  transition: all 0.3s ease;
+}
+
+.liquid-glass-badge {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+/* ApeX Emblem Glass Styling */
+.emblem-glass-ring {
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 70%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 0, 0, 0.6),
+    0 0 30px -4px rgba(255, 255, 255, 0.08),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Subtle Shimmer Ray */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.04) 48%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.04) 52%,
+    transparent 60%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.shimmer-effect:hover::after {
+  opacity: 1;
+  animation: shineSweep 1.8s ease infinite;
+}
+
+@keyframes shineSweep {
+  0% { transform: translateY(-100%) rotate(30deg); }
+  100% { transform: translateY(100%) rotate(30deg); }
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
